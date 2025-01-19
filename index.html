@@ -97,7 +97,7 @@
         }
 
         .bio a {
-            color: limegreen;
+            color: gray;
             text-decoration: none;
             font-weight: bold;
         }
@@ -108,7 +108,9 @@
 
         .message {
             position: absolute;
-            bottom: -30px;
+            top: 40%;
+            left: 50%;
+            transform: translateX(-50%) translateY(-50%);
             font-size: 26px;
             font-weight: bold;
             background: linear-gradient(90deg, #ff9a9e, #fad0c4);
@@ -126,6 +128,58 @@
                 text-shadow: 0 0 15px #ff7eb3, 0 0 30px #ff7eb3;
             }
         }
+
+        .btn-new {
+            position: absolute;
+            bottom: -40px;
+            left: 50%;
+            transform: translateX(-50%);
+            padding: 15px 30px;
+            background-color: transparent;
+            border: 2px solid #00ff00;
+            border-radius: 30px;
+            color: #00ff00;
+            font-size: 18px;
+            font-weight: bold;
+            text-transform: uppercase;
+            cursor: pointer;
+            overflow: hidden;
+            position: relative;
+            text-decoration: none;
+        }
+
+        .btn-new:after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: -200px;
+            width: 60px;
+            height: 100px;
+            background-color: #fff;
+            filter: blur(30px);
+            transform: skewX(30deg) translateZ(0);
+            transition: 1s;
+            animation-name: slideme;
+            animation-duration: 3s;
+            animation-delay: 0.05s;
+            animation-timing-function: ease;
+            animation-iteration-count: infinite;
+        }
+
+        @keyframes slideme {
+            0% {
+                left: -30px;
+                margin-left: 0px;
+            }
+            30% {
+                left: 110%;
+                margin-left: 80px;
+            }
+            100% {
+                left: 110%;
+                margin-left: 80px;
+            }
+        }
     </style>
 </head>
 <body>
@@ -136,7 +190,7 @@
                     <img src="https://t.me/i/userpic/320/codermasochist.jpg" alt="Assa Profile">
                     <h1>Assa</h1>
                     <div class="bio">
-                        <a href="https://t.me/codermasochistbot">t.me/codermasochistbot</a><br>
+                        <a href="https://t.me/codermasochist">t.me/codermasochist</a><br>
                         bio: <a href="http://Assa.lol">click.</a>
                     </div>
                 </div>
@@ -151,6 +205,7 @@
             </div>
         </div>
         <div class="message">Always Forever</div>
+        <a href="http://Assa.lol" class="btn-new">click</a>
     </div>
 </body>
 </html>
