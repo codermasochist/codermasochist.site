@@ -16,11 +16,10 @@
             justify-content: center;
             align-items: center;
             height: 100vh;
-            background: linear-gradient(135deg, #8e44ad, #3498db, #e74c3c);
+            background: linear-gradient(135deg, #ff9a9e, #fad0c4, #8ec5fc, #e0c3fc);
             background-size: 400% 400%;
             animation: gradientBG 8s ease infinite;
             font-family: Arial, sans-serif;
-            overflow: hidden;
         }
 
         @keyframes gradientBG {
@@ -31,8 +30,8 @@
 
         .heart {
             position: relative;
-            width: 350px;
-            height: 350px;
+            width: 400px;
+            height: 400px;
             background: rgba(255, 255, 255, 0.1);
             border-radius: 50% 50% 0 0;
             transform: rotate(-45deg);
@@ -40,26 +39,27 @@
             justify-content: center;
             align-items: center;
             backdrop-filter: blur(5px);
+            margin-top: -50px;
         }
 
         .heart::before,
         .heart::after {
             content: '';
             position: absolute;
-            width: 350px;
-            height: 350px;
+            width: 400px;
+            height: 400px;
             background: inherit;
             border-radius: 50%;
         }
 
         .heart::before {
-            top: -175px;
+            top: -200px;
             left: 0;
         }
 
         .heart::after {
             top: 0;
-            left: -175px;
+            left: -200px;
         }
 
         .profiles {
@@ -69,7 +69,7 @@
             flex-direction: row;
             justify-content: space-around;
             align-items: center;
-            width: 280px;
+            width: 300px;
         }
 
         .profile {
@@ -77,21 +77,38 @@
         }
 
         .profile img {
-            width: 100px;
-            height: 100px;
+            width: 120px;
+            height: 120px;
             border-radius: 50%;
             border: 3px solid white;
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
         }
 
         .profile h1 {
-            font-size: 18px;
+            font-size: 20px;
             margin-top: 10px;
             color: white;
         }
 
+        .bio {
+            font-size: 14px;
+            color: gray;
+            margin-top: 5px;
+        }
+
+        .bio a {
+            color: limegreen;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .bio a:hover {
+            text-decoration: underline;
+        }
+
         .message {
             position: absolute;
+            bottom: -30px;
             font-size: 26px;
             font-weight: bold;
             background: linear-gradient(90deg, #ff9a9e, #fad0c4);
@@ -118,14 +135,22 @@
                 <div class="profile">
                     <img src="https://t.me/i/userpic/320/codermasochist.jpg" alt="Assa Profile">
                     <h1>Assa</h1>
+                    <div class="bio">
+                        <a href="https://t.me/codermasochistbot">t.me/codermasochistbot</a><br>
+                        bio: <a href="http://Assa.lol">click.</a>
+                    </div>
                 </div>
-                <div class="message">Always Forever</div>
                 <div class="profile">
                     <img src="https://t.me/i/userpic/320/ksellik.jpg" alt="Ksellik Profile">
                     <h1>Ksellik</h1>
+                    <div class="bio">
+                        <a href="https://t.me/ksellik">t.me/ksellik</a><br>
+                        bio: <a href="http://ksellikk.github.io">click.</a>
+                    </div>
                 </div>
             </div>
         </div>
+        <div class="message">Always Forever</div>
     </div>
 </body>
 </html>
