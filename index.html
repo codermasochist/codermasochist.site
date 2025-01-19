@@ -29,6 +29,18 @@
             100% { background-position: 0% 50%; }
         }
 
+        .heart-background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('https://www.transparenttextures.com/patterns/soft-petroleum.png');
+            background-size: 200px 200px;
+            z-index: -1;
+            pointer-events: none;
+        }
+
         .heart {
             position: absolute;
             width: 500px;
@@ -37,10 +49,11 @@
             border-radius: 50%;
             transform: rotate(-45deg);
             left: 50%;
-            top: 20%;
+            top: 5%;
             margin-left: -250px;
             margin-top: -250px;
             backdrop-filter: blur(5px);
+            z-index: -2;
         }
 
         .heart::before,
@@ -65,9 +78,9 @@
 
         .profiles {
             position: absolute;
-            top: 30%;
+            top: 20%;
             display: flex;
-            justify-content: space-around;
+            justify-content: space-between; /* Изменено на space-between для большего расстояния */
             align-items: center;
             width: 60%;
         }
@@ -75,11 +88,12 @@
         .profile {
             text-align: center;
             color: white;
+            z-index: 1;
         }
 
         .profile img {
-            width: 150px;
-            height: 150px;
+            width: 180px;
+            height: 180px;
             border-radius: 50%;
             border: 3px solid white;
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
@@ -109,9 +123,17 @@
         .bio .click {
             color: #00FF00; /* Зеленый цвет для "click" */
         }
+
+        .emoji {
+            font-size: 30px;
+            color: white;
+            margin: 0 30px; /* Увеличен отступ между профилями */
+        }
+
     </style>
 </head>
 <body>
+    <div class="heart-background"></div>
     <div class="heart"></div>
     <div class="profiles">
         <div class="profile">
@@ -122,6 +144,7 @@
                 bio: <a href="http://Assa.lol" class="click">click.</a>
             </div>
         </div>
+        <div class="emoji">👀</div>
         <div class="profile">
             <img src="https://t.me/i/userpic/320/ksellik.jpg" alt="Ksellik Profile">
             <h1>Ks</h1>
