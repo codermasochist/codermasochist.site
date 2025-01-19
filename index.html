@@ -20,6 +20,7 @@
             background-size: 400% 400%;
             animation: gradientBG 8s ease infinite;
             font-family: Arial, sans-serif;
+            position: relative;
         }
 
         @keyframes gradientBG {
@@ -29,25 +30,25 @@
         }
 
         .heart {
-            position: relative;
-            width: 400px;
-            height: 400px;
+            position: absolute;
+            width: 500px;
+            height: 500px;
             background: rgba(255, 255, 255, 0.1);
-            border-radius: 50% 50% 0 0;
+            border-radius: 50%;
             transform: rotate(-45deg);
-            display: flex;
-            justify-content: center;
-            align-items: center;
+            left: 50%;
+            top: 20%;
+            margin-left: -250px;
+            margin-top: -250px;
             backdrop-filter: blur(5px);
-            margin-top: -50px;
         }
 
         .heart::before,
         .heart::after {
             content: '';
             position: absolute;
-            width: 400px;
-            height: 400px;
+            width: 500px;
+            height: 500px;
             background: inherit;
             border-radius: 50%;
         }
@@ -70,10 +71,12 @@
             justify-content: space-around;
             align-items: center;
             width: 300px;
+            top: 30%;
         }
 
         .profile {
             text-align: center;
+            color: white;
         }
 
         .profile img {
@@ -87,17 +90,16 @@
         .profile h1 {
             font-size: 20px;
             margin-top: 10px;
-            color: white;
         }
 
         .bio {
             font-size: 14px;
-            color: #0000FF; /* Синие ссылки для био */
+            color: gray;
             margin-top: 5px;
         }
 
         .bio a {
-            color: #00FF00; /* Зеленые ссылки для био */
+            color: gray;
             text-decoration: none;
             font-weight: bold;
         }
@@ -106,16 +108,20 @@
             text-decoration: underline;
         }
 
+        .bio .click {
+            color: #00FF00; /* Зеленый цвет для "click" */
+        }
+
         .btn-new {
             position: absolute;
-            bottom: 30%;
+            bottom: 25%;
             left: 50%;
             transform: translateX(-50%);
             padding: 15px 30px;
             background-color: transparent;
-            border: 2px solid #00FF00;
+            border: 2px solid #00F;
             border-radius: 30px;
-            color: #00FF00;
+            color: #00F;
             font-size: 18px;
             font-weight: bold;
             text-transform: uppercase;
@@ -160,9 +166,9 @@
 
         .message {
             position: absolute;
-            top: 60%;
+            top: 45%;
             left: 50%;
-            transform: translateX(-50%) translateY(-50%);
+            transform: translateX(-50%);
             font-size: 26px;
             font-weight: bold;
             color: white;
@@ -188,29 +194,26 @@
     </style>
 </head>
 <body>
-    <div>
-        <div class="heart">
-            <div class="profiles">
-                <div class="profile">
-                    <img src="https://t.me/i/userpic/320/codermasochist.jpg" alt="Assa Profile">
-                    <h1>Assa</h1>
-                    <div class="bio">
-                        <a href="https://t.me/codermasochist">t.me/codermasochist</a><br>
-                        bio: <a href="http://Assa.lol">click.</a>
-                    </div>
-                </div>
-                <div class="profile">
-                    <img src="https://t.me/i/userpic/320/ksellik.jpg" alt="Ksellik Profile">
-                    <h1>Ksellik</h1>
-                    <div class="bio">
-                        <a href="https://t.me/ksellik">t.me/ksellik</a><br>
-                        bio: <a href="http://ksellikk.github.io">click.</a>
-                    </div>
-                </div>
+    <div class="heart"></div>
+    <div class="profiles">
+        <div class="profile">
+            <img src="https://t.me/i/userpic/320/codermasochist.jpg" alt="Assa Profile">
+            <h1>Assa</h1>
+            <div class="bio">
+                <a href="https://t.me/codermasochist">t.me/codermasochist</a><br>
+                bio: <a href="http://Assa.lol" class="click">click.</a>
             </div>
         </div>
-        <a href="javascript:void(0);" class="btn-new" onclick="document.querySelector('.message').style.opacity = 1; document.querySelector('.message').style.transform = 'translateX(-50%) translateY(-50%) scale(1)';">click</a>
-        <div class="message">Always Forever</div>
+        <div class="profile">
+            <img src="https://t.me/i/userpic/320/ksellik.jpg" alt="Ksellik Profile">
+            <h1>Ksellik</h1>
+            <div class="bio">
+                <a href="https://t.me/ksellik">t.me/ksellik</a><br>
+                bio: <a href="http://ksellikk.github.io" class="click">click.</a>
+            </div>
+        </div>
     </div>
+    <a href="javascript:void(0);" class="btn-new" onclick="document.querySelector('.message').style.opacity = 1; document.querySelector('.message').style.transform = 'translateX(-50%) translateY(-50%) scale(1)'; document.querySelector('.btn-new').style.display = 'none';">click</a>
+    <div class="message">Always Forever</div>
 </body>
 </html>
