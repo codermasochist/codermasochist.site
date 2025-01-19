@@ -37,7 +37,7 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            width: 80%;
+            width: 70%;
             max-width: 800px; /* Ограничиваем ширину */
             margin-left: auto;
             margin-right: auto;
@@ -83,24 +83,22 @@
             color: #00FF00; /* Зеленый цвет для "click" */
         }
 
-        .emoji {
-            font-size: 30px;
-            color: white;
-            margin: 0 30px;
-        }
-
         /* GIF под профилями */
         .gif-container {
             position: absolute;
-            bottom: 10%; /* 10% от нижней границы */
+            bottom: 5%; /* Сделал чуть ближе */
             display: flex;
             justify-content: center;
             width: 100%;
+            z-index: 0;
         }
 
         .gif-container video {
             max-width: 80%;
             max-height: 300px;
+            border: 5px solid #ffffff;
+            border-radius: 15px;
+            box-shadow: 0 0 30px rgba(255, 255, 255, 0.8); /* Светящая рамка */
         }
     </style>
 </head>
@@ -114,7 +112,6 @@
                 bio: <a href="http://Assa.lol" class="click">click.</a>
             </div>
         </div>
-        <div class="emoji">👀</div>
         <div class="profile">
             <img src="https://t.me/i/userpic/320/ksellik.jpg" alt="Ksellik Profile">
             <h1>Ks</h1>
@@ -125,7 +122,7 @@
         </div>
     </div>
 
-    <!-- GIF под профилями -->
+    <!-- GIF под профилями с рамкой -->
     <div class="gif-container">
         <video autoplay loop muted>
             <source src="https://envs.sh/H8m.mp4" type="video/mp4">
