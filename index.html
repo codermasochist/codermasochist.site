@@ -16,11 +16,13 @@
             justify-content: center;
             align-items: center;
             height: 100vh;
+            width: 100vw;
             background: linear-gradient(135deg, #ff9a9e, #fad0c4, #8ec5fc, #e0c3fc);
             background-size: 400% 400%;
             animation: gradientBG 8s ease infinite;
             font-family: Arial, sans-serif;
             position: relative;
+            overflow: hidden; /* Блокирует прокрутку страницы */
         }
 
         @keyframes gradientBG {
@@ -35,10 +37,16 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: url('https://www.transparenttextures.com/patterns/soft-petroleum.png');
-            background-size: 200px 200px;
+            background: url('https://upload.wikimedia.org/wikipedia/commons/a/a5/Heart_PNG1.png') repeat;
+            background-size: 150px 150px;
             z-index: -1;
             pointer-events: none;
+            animation: moveHearts 20s infinite linear;
+        }
+
+        @keyframes moveHearts {
+            0% { background-position: 0 0; }
+            100% { background-position: 1000px 1000px; }
         }
 
         .heart {
@@ -49,7 +57,7 @@
             border-radius: 50%;
             transform: rotate(-45deg);
             left: 50%;
-            top: 5%;
+            top: 0%;
             margin-left: -250px;
             margin-top: -250px;
             backdrop-filter: blur(5px);
@@ -78,17 +86,21 @@
 
         .profiles {
             position: absolute;
-            top: 20%;
+            top: 10%; /* Немного выше */
             display: flex;
-            justify-content: space-between; /* Изменено на space-between для большего расстояния */
+            justify-content: space-between;
             align-items: center;
             width: 60%;
+            max-width: 800px; /* Ограничивает ширину профилей */
+            margin-left: auto;
+            margin-right: auto;
         }
 
         .profile {
             text-align: center;
             color: white;
             z-index: 1;
+            width: 200px; /* Фиксированная ширина для профилей */
         }
 
         .profile img {
@@ -127,9 +139,8 @@
         .emoji {
             font-size: 30px;
             color: white;
-            margin: 0 30px; /* Увеличен отступ между профилями */
+            margin: 0 30px;
         }
-
     </style>
 </head>
 <body>
