@@ -65,13 +65,11 @@
 
         .profiles {
             position: absolute;
-            transform: rotate(45deg);
+            top: 30%;
             display: flex;
-            flex-direction: row;
             justify-content: space-around;
             align-items: center;
-            width: 300px;
-            top: 30%;
+            width: 60%;
         }
 
         .profile {
@@ -80,15 +78,15 @@
         }
 
         .profile img {
-            width: 120px;
-            height: 120px;
+            width: 150px;
+            height: 150px;
             border-radius: 50%;
             border: 3px solid white;
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
         }
 
         .profile h1 {
-            font-size: 20px;
+            font-size: 24px;
             margin-top: 10px;
         }
 
@@ -110,86 +108,6 @@
 
         .bio .click {
             color: #00FF00; /* Зеленый цвет для "click" */
-        }
-
-        .btn-new {
-            position: absolute;
-            bottom: 25%;
-            left: 50%;
-            transform: translateX(-50%);
-            padding: 15px 30px;
-            background-color: transparent;
-            border: 2px solid #00F;
-            border-radius: 30px;
-            color: #00F;
-            font-size: 18px;
-            font-weight: bold;
-            text-transform: uppercase;
-            cursor: pointer;
-            overflow: hidden;
-            position: relative;
-            text-decoration: none;
-        }
-
-        .btn-new:after {
-            content: "";
-            position: absolute;
-            top: 0;
-            left: -200px;
-            width: 60px;
-            height: 100px;
-            background-color: #fff;
-            filter: blur(30px);
-            transform: skewX(30deg) translateZ(0);
-            transition: 1s;
-            animation-name: slideme;
-            animation-duration: 3s;
-            animation-delay: 0.05s;
-            animation-timing-function: ease;
-            animation-iteration-count: infinite;
-        }
-
-        @keyframes slideme {
-            0% {
-                left: -30px;
-                margin-left: 0px;
-            }
-            30% {
-                left: 110%;
-                margin-left: 80px;
-            }
-            100% {
-                left: 110%;
-                margin-left: 80px;
-            }
-        }
-
-        .message {
-            position: absolute;
-            top: 45%;
-            left: 50%;
-            transform: translateX(-50%);
-            font-size: 26px;
-            font-weight: bold;
-            color: white;
-            opacity: 0;
-            animation: revealText 1s ease-in-out forwards;
-        }
-
-        @keyframes revealText {
-            0% {
-                opacity: 0;
-                transform: translateX(-50%) translateY(-50%) scale(0.2);
-            }
-            100% {
-                opacity: 1;
-                transform: translateX(-50%) translateY(-50%) scale(1);
-            }
-        }
-
-        .btn-new:active ~ .message {
-            animation: revealText 2s ease-in-out forwards;
-            opacity: 1;
         }
     </style>
 </head>
@@ -213,7 +131,5 @@
             </div>
         </div>
     </div>
-    <a href="javascript:void(0);" class="btn-new" onclick="document.querySelector('.message').style.opacity = 1; document.querySelector('.message').style.transform = 'translateX(-50%) translateY(-50%) scale(1)'; document.querySelector('.btn-new').style.display = 'none';">click</a>
-    <div class="message">Always Forever</div>
 </body>
 </html>
