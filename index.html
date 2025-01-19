@@ -26,14 +26,21 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            width: 60%;
+            width: 100%;
+            max-width: 900px;
             top: 20%;
             position: absolute;
+            padding: 0 20px;
+            box-sizing: border-box;
+            flex-wrap: wrap;
+            gap: 30px;
+            z-index: 10;
         }
 
         .profile {
             text-align: center;
             color: white;
+            width: 45%;
         }
 
         .profile img {
@@ -70,10 +77,11 @@
         }
 
         .gif-container {
-            margin-top: 20px;
+            margin-top: 30px;
             display: flex;
             justify-content: center;
             align-items: center;
+            width: 100%;
         }
 
         .gif-container video {
@@ -90,8 +98,8 @@
 
         @media (max-width: 768px) {
             .profiles {
-                width: 80%;
                 top: 15%;
+                width: 80%;
             }
 
             .profile img {
@@ -114,10 +122,10 @@
 
         @media (max-width: 480px) {
             .profiles {
+                top: 20%;
                 flex-direction: column;
-                justify-content: center;
                 align-items: center;
-                top: 25%;
+                width: 90%;
             }
 
             .profile {
