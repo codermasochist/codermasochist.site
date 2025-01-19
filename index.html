@@ -11,55 +11,34 @@
             box-sizing: border-box;
         }
 
-        /* Темный градиентный фон */
         body {
             display: flex;
             justify-content: center;
             align-items: center;
             height: 100vh;
-            width: 100vw;
-            background: linear-gradient(135deg, #2c3e50, #34495e);
+            background: linear-gradient(135deg, #1a1a2e, #16213e, #0f3460);
             font-family: Arial, sans-serif;
             position: relative;
-            overflow: hidden; /* Отключаем прокрутку */
-            margin: 0; /* Убираем внешние отступы */
-        }
-
-        /* Убираем прокрутку на странице */
-        html, body {
-            height: 100%;
             overflow: hidden;
         }
 
         .profiles {
             position: absolute;
-            top: 12%; /* Профили чуть выше */
             display: flex;
             justify-content: space-between;
             align-items: center;
-            width: 75%; /* Ширина профилей увеличена */
-            max-width: 800px; /* Ограничиваем ширину */
-            margin-left: auto;
-            margin-right: auto;
-            z-index: 1;
+            width: 60%;
+            top: 20%;
         }
 
-        /* Сдвигаем профили чуть влево */
         .profile {
             text-align: center;
             color: white;
-            width: 200px; /* Ширина профиля */
-            margin-right: 30px; /* Увеличено расстояние между профилями */
-        }
-
-        /* Передвигаем профиль Assa чуть влево */
-        .profile:first-child {
-            margin-left: -20px;
         }
 
         .profile img {
-            width: 180px;
-            height: 180px;
+            width: 150px;
+            height: 150px;
             border-radius: 50%;
             border: 3px solid white;
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
@@ -90,22 +69,72 @@
             color: #00FF00; /* Зеленый цвет для "click" */
         }
 
-        /* GIF под профилями */
         .gif-container {
-            position: absolute;
-            top: 60%; /* Немного ниже профилей */
+            margin-top: 20px;
             display: flex;
             justify-content: center;
-            width: 100%;
-            z-index: 0;
+            align-items: center;
         }
 
         .gif-container video {
-            max-width: 80%;
-            max-height: 300px;
-            border: 5px solid #ffffff;
-            border-radius: 15px;
-            box-shadow: 0 0 30px rgba(255, 255, 255, 0.8); /* Светящая рамка */
+            width: 300px;
+            border: 5px solid rgba(255, 255, 255, 0.2);
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+        }
+
+        @media (max-width: 768px) {
+            .profiles {
+                width: 80%;
+                top: 15%;
+            }
+
+            .profile img {
+                width: 120px;
+                height: 120px;
+            }
+
+            .profile h1 {
+                font-size: 20px;
+            }
+
+            .bio {
+                font-size: 12px;
+            }
+
+            .gif-container video {
+                width: 250px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .profiles {
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                top: 25%;
+            }
+
+            .profile {
+                margin-bottom: 20px;
+            }
+
+            .profile img {
+                width: 100px;
+                height: 100px;
+            }
+
+            .profile h1 {
+                font-size: 18px;
+            }
+
+            .bio {
+                font-size: 10px;
+            }
+
+            .gif-container video {
+                width: 220px;
+            }
         }
     </style>
 </head>
@@ -129,10 +158,10 @@
         </div>
     </div>
 
-    <!-- GIF под профилями с рамкой -->
     <div class="gif-container">
-        <video autoplay loop muted>
+        <video controls>
             <source src="https://envs.sh/H8m.mp4" type="video/mp4">
+            Your browser does not support the video tag.
         </video>
     </div>
 </body>
