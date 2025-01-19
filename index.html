@@ -76,14 +76,14 @@
             align-items: center;
         }
 
-        .gif-container img {
+        .gif-container video {
             width: 300px;
             border: 5px solid rgba(255, 255, 255, 0.2);
             border-radius: 10px;
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
         }
 
-        .gif-container img {
+        .gif-container video {
             border: 5px solid #fff;
             box-shadow: 0 0 15px rgba(255, 255, 255, 0.6);
         }
@@ -107,7 +107,7 @@
                 font-size: 12px;
             }
 
-            .gif-container img {
+            .gif-container video {
                 width: 250px;
             }
         }
@@ -137,7 +137,7 @@
                 font-size: 10px;
             }
 
-            .gif-container img {
+            .gif-container video {
                 width: 220px;
             }
         }
@@ -164,7 +164,9 @@
     </div>
 
     <div class="gif-container">
-        <img src="https://envs.sh/H8m.mp4" alt="gif">
+        <video autoplay loop muted>
+            <source src="https://envs.sh/H8m.mp4" type="video/mp4">
+        </video>
     </div>
 </body>
 </html>
