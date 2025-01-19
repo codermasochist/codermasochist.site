@@ -92,12 +92,12 @@
 
         .bio {
             font-size: 14px;
-            color: gray;
+            color: #0000FF; /* Синие ссылки для био */
             margin-top: 5px;
         }
 
         .bio a {
-            color: gray;
+            color: #00FF00; /* Зеленые ссылки для био */
             text-decoration: none;
             font-weight: bold;
         }
@@ -106,39 +106,16 @@
             text-decoration: underline;
         }
 
-        .message {
-            position: absolute;
-            top: 40%;
-            left: 50%;
-            transform: translateX(-50%) translateY(-50%);
-            font-size: 26px;
-            font-weight: bold;
-            background: linear-gradient(90deg, #ff9a9e, #fad0c4);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            text-shadow: 0 0 10px rgba(255, 182, 193, 0.8), 0 0 20px rgba(255, 105, 135, 0.6);
-            animation: glow 3s infinite alternate;
-        }
-
-        @keyframes glow {
-            0% {
-                text-shadow: 0 0 10px #ff758c, 0 0 20px #ff758c;
-            }
-            100% {
-                text-shadow: 0 0 15px #ff7eb3, 0 0 30px #ff7eb3;
-            }
-        }
-
         .btn-new {
             position: absolute;
-            bottom: -40px;
+            bottom: 30%;
             left: 50%;
             transform: translateX(-50%);
             padding: 15px 30px;
             background-color: transparent;
-            border: 2px solid #00ff00;
+            border: 2px solid #00FF00;
             border-radius: 30px;
-            color: #00ff00;
+            color: #00FF00;
             font-size: 18px;
             font-weight: bold;
             text-transform: uppercase;
@@ -180,6 +157,34 @@
                 margin-left: 80px;
             }
         }
+
+        .message {
+            position: absolute;
+            top: 60%;
+            left: 50%;
+            transform: translateX(-50%) translateY(-50%);
+            font-size: 26px;
+            font-weight: bold;
+            color: white;
+            opacity: 0;
+            animation: revealText 1s ease-in-out forwards;
+        }
+
+        @keyframes revealText {
+            0% {
+                opacity: 0;
+                transform: translateX(-50%) translateY(-50%) scale(0.2);
+            }
+            100% {
+                opacity: 1;
+                transform: translateX(-50%) translateY(-50%) scale(1);
+            }
+        }
+
+        .btn-new:active ~ .message {
+            animation: revealText 2s ease-in-out forwards;
+            opacity: 1;
+        }
     </style>
 </head>
 <body>
@@ -204,8 +209,8 @@
                 </div>
             </div>
         </div>
+        <a href="javascript:void(0);" class="btn-new" onclick="document.querySelector('.message').style.opacity = 1; document.querySelector('.message').style.transform = 'translateX(-50%) translateY(-50%) scale(1)';">click</a>
         <div class="message">Always Forever</div>
-        <a href="http://Assa.lol" class="btn-new">click</a>
     </div>
 </body>
 </html>
