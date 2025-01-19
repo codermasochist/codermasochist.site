@@ -11,6 +11,7 @@
             box-sizing: border-box;
         }
 
+        /* Отключаем прокрутку страницы */
         body {
             display: flex;
             justify-content: center;
@@ -22,7 +23,8 @@
             animation: gradientBG 8s ease infinite;
             font-family: Arial, sans-serif;
             position: relative;
-            overflow: hidden; /* Блокирует прокрутку страницы */
+            overflow: hidden; /* Отключаем прокрутку */
+            margin: 0; /* Убираем внешние отступы */
         }
 
         @keyframes gradientBG {
@@ -91,16 +93,16 @@
             justify-content: space-between;
             align-items: center;
             width: 60%;
-            max-width: 800px; /* Ограничивает ширину профилей */
+            max-width: 800px; /* Ограничиваем ширину */
             margin-left: auto;
             margin-right: auto;
+            z-index: 1;
         }
 
         .profile {
             text-align: center;
             color: white;
-            z-index: 1;
-            width: 200px; /* Фиксированная ширина для профилей */
+            width: 200px; /* Ширина профиля */
         }
 
         .profile img {
