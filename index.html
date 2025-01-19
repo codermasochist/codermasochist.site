@@ -16,42 +16,50 @@
             justify-content: center;
             align-items: center;
             height: 100vh;
-            background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+            background: linear-gradient(135deg, #8e44ad, #3498db, #e74c3c);
+            background-size: 400% 400%;
+            animation: gradientBG 8s ease infinite;
             font-family: Arial, sans-serif;
             overflow: hidden;
         }
 
+        @keyframes gradientBG {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
         .heart {
             position: relative;
-            width: 300px;
-            height: 300px;
-            background: linear-gradient(135deg, #ff758c, #ff7eb3);
+            width: 350px;
+            height: 350px;
+            background: rgba(255, 255, 255, 0.1);
             border-radius: 50% 50% 0 0;
             transform: rotate(-45deg);
             display: flex;
             justify-content: center;
             align-items: center;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            backdrop-filter: blur(5px);
         }
 
         .heart::before,
         .heart::after {
             content: '';
             position: absolute;
-            width: 300px;
-            height: 300px;
+            width: 350px;
+            height: 350px;
             background: inherit;
             border-radius: 50%;
         }
 
         .heart::before {
-            top: -150px;
+            top: -175px;
             left: 0;
         }
 
         .heart::after {
             top: 0;
-            left: -150px;
+            left: -175px;
         }
 
         .profiles {
@@ -61,8 +69,7 @@
             flex-direction: row;
             justify-content: space-around;
             align-items: center;
-            width: 200px;
-            height: 200px;
+            width: 280px;
         }
 
         .profile {
@@ -70,22 +77,22 @@
         }
 
         .profile img {
-            width: 80px;
-            height: 80px;
+            width: 100px;
+            height: 100px;
             border-radius: 50%;
             border: 3px solid white;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
         }
 
         .profile h1 {
-            font-size: 16px;
+            font-size: 18px;
             margin-top: 10px;
             color: white;
         }
 
         .message {
-            margin-top: 20px;
-            font-size: 24px;
+            position: absolute;
+            font-size: 26px;
             font-weight: bold;
             background: linear-gradient(90deg, #ff9a9e, #fad0c4);
             -webkit-background-clip: text;
@@ -112,13 +119,13 @@
                     <img src="https://t.me/i/userpic/320/codermasochist.jpg" alt="Assa Profile">
                     <h1>Assa</h1>
                 </div>
+                <div class="message">Always Forever</div>
                 <div class="profile">
                     <img src="https://t.me/i/userpic/320/ksellik.jpg" alt="Ksellik Profile">
                     <h1>Ksellik</h1>
                 </div>
             </div>
         </div>
-        <div class="message">Always Forever</div>
     </div>
 </body>
 </html>
