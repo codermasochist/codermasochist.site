@@ -36,6 +36,8 @@
             z-index: 10;
             text-align: center;
             margin-top: 10%;
+            flex-direction: row; /* Профили будут выстроены по строке, а не по столбцу */
+            justify-content: center; /* Центрирование элементов */
         }
 
         .profile {
@@ -99,11 +101,14 @@
             box-shadow: 0 0 15px rgba(255, 255, 255, 0.6);
         }
 
+        /* Стиль для экранов до 768px */
         @media (max-width: 768px) {
             .profiles {
                 top: 10%;
                 width: 80%;
                 gap: 20px;
+                flex-direction: row; /* Убедимся, что профили не будут столбиками */
+                justify-content: center; /* Центрируем профили на экране */
             }
 
             .profile img {
@@ -124,12 +129,14 @@
             }
         }
 
+        /* Стиль для экранов до 480px */
         @media (max-width: 480px) {
             .profiles {
                 top: 15%;
                 flex-direction: column;
                 align-items: center;
                 width: 90%;
+                gap: 20px;
             }
 
             .profile img {
