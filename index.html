@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>♡</title>
+    <title>Assa & Ksellik</title>
     <style>
         * {
             margin: 0;
@@ -16,25 +16,60 @@
             justify-content: center;
             align-items: center;
             height: 100vh;
-            background: linear-gradient(135deg, #1a1a2e, #16213e, #0f3460);
+            background: linear-gradient(135deg, #ff9a9e, #fad0c4, #8ec5fc, #e0c3fc);
+            background-size: 400% 400%;
+            animation: gradientBG 8s ease infinite;
             font-family: Arial, sans-serif;
             position: relative;
-            overflow: hidden;
+        }
+
+        @keyframes gradientBG {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        .heart {
+            position: absolute;
+            width: 500px;
+            height: 500px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            transform: rotate(-45deg);
+            left: 50%;
+            top: 20%;
+            margin-left: -250px;
+            margin-top: -250px;
+            backdrop-filter: blur(5px);
+        }
+
+        .heart::before,
+        .heart::after {
+            content: '';
+            position: absolute;
+            width: 500px;
+            height: 500px;
+            background: inherit;
+            border-radius: 50%;
+        }
+
+        .heart::before {
+            top: -200px;
+            left: 0;
+        }
+
+        .heart::after {
+            top: 0;
+            left: -200px;
         }
 
         .profiles {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            width: 100%;
-            max-width: 900px;
-            top: 20%;
             position: absolute;
-            padding: 0 20px;
-            box-sizing: border-box;
-            flex-wrap: wrap;
-            gap: 30px;
-            z-index: 10;
+            top: 20%;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            width: 80%;
         }
 
         .profile {
@@ -44,8 +79,8 @@
         }
 
         .profile img {
-            width: 150px;
-            height: 150px;
+            width: 180px;
+            height: 180px;
             border-radius: 50%;
             border: 3px solid white;
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
@@ -76,35 +111,48 @@
             color: #00FF00; /* Зеленый цвет для "click" */
         }
 
-        .gif-container {
-            margin-top: 30px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            width: 100%;
-        }
+        /* Адаптивность для всех устройств */
+        @media (max-width: 1024px) {
+            .profiles {
+                flex-direction: column;
+                align-items: center;
+            }
 
-        .gif-container video {
-            width: 300px;
-            border: 5px solid rgba(255, 255, 255, 0.2);
-            border-radius: 10px;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
-        }
+            .profile {
+                width: 80%;
+                margin-bottom: 20px;
+            }
 
-        .gif-container video {
-            border: 5px solid #fff;
-            box-shadow: 0 0 15px rgba(255, 255, 255, 0.6);
+            .heart {
+                width: 400px;
+                height: 400px;
+                margin-top: 10%;
+            }
         }
 
         @media (max-width: 768px) {
             .profiles {
-                top: 15%;
-                width: 80%;
+                flex-direction: column;
+                align-items: center;
+                margin-top: 20%;
             }
 
+            .profile {
+                width: 90%;
+                margin-bottom: 20px;
+            }
+
+            .heart {
+                width: 300px;
+                height: 300px;
+                margin-top: 15%;
+            }
+        }
+
+        @media (max-width: 480px) {
             .profile img {
-                width: 120px;
-                height: 120px;
+                width: 150px;
+                height: 150px;
             }
 
             .profile h1 {
@@ -115,43 +163,16 @@
                 font-size: 12px;
             }
 
-            .gif-container video {
+            .heart {
                 width: 250px;
-            }
-        }
-
-        @media (max-width: 480px) {
-            .profiles {
-                top: 20%;
-                flex-direction: column;
-                align-items: center;
-                width: 90%;
-            }
-
-            .profile {
-                margin-bottom: 20px;
-            }
-
-            .profile img {
-                width: 100px;
-                height: 100px;
-            }
-
-            .profile h1 {
-                font-size: 18px;
-            }
-
-            .bio {
-                font-size: 10px;
-            }
-
-            .gif-container video {
-                width: 220px;
+                height: 250px;
+                margin-top: 20%;
             }
         }
     </style>
 </head>
 <body>
+    <div class="heart"></div>
     <div class="profiles">
         <div class="profile">
             <img src="https://t.me/i/userpic/320/codermasochist.jpg" alt="Assa Profile">
@@ -163,18 +184,12 @@
         </div>
         <div class="profile">
             <img src="https://t.me/i/userpic/320/ksellik.jpg" alt="Ksellik Profile">
-            <h1>Ks</h1>
+            <h1>Ksellik</h1>
             <div class="bio">
                 <a href="https://t.me/ksellik">t.me/ksellik</a><br>
                 bio: <a href="http://ksellikk.github.io" class="click">click.</a>
             </div>
         </div>
-    </div>
-
-    <div class="gif-container">
-        <video autoplay loop muted>
-            <source src="https://envs.sh/H8m.mp4" type="video/mp4">
-        </video>
     </div>
 </body>
 </html>
