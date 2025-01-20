@@ -35,7 +35,7 @@
             flex-wrap: wrap;
             z-index: 10;
             text-align: center;
-            margin-top: 5%; /* Уменьшено с 10% на 5%, чтобы поднять профили */
+            margin-top: 5%; /* Поднято */
             flex-direction: row;
             justify-content: center;
         }
@@ -87,6 +87,8 @@
             align-items: center;
             width: 100%;
             margin-top: 40px;
+            z-index: 5;
+            position: relative;
         }
 
         .gif-container video {
@@ -104,10 +106,10 @@
         /* Стиль для экранов до 768px */
         @media (max-width: 768px) {
             .profiles {
-                top: 5%; /* Уменьшено с 10% на 5% для мобильных экранов */
-                width: 80%;
+                flex-direction: column;
+                align-items: center;
+                margin-top: 10%; /* Поднято для мобильных устройств */
                 gap: 20px;
-                flex-direction: row;
                 justify-content: center;
             }
 
@@ -124,6 +126,10 @@
                 font-size: 12px;
             }
 
+            .gif-container {
+                margin-top: 30px;
+            }
+
             .gif-container video {
                 width: 250px;
             }
@@ -132,10 +138,9 @@
         /* Стиль для экранов до 480px */
         @media (max-width: 480px) {
             .profiles {
-                top: 10%; /* Уменьшено с 15% на 10% для еще меньших экранов */
+                margin-top: 10%; /* Поднято на самых маленьких экранах */
                 flex-direction: column;
                 align-items: center;
-                width: 90%;
                 gap: 20px;
             }
 
