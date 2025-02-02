@@ -8,69 +8,86 @@
         * { margin: 0; padding: 0; box-sizing: border-box; font-family: Arial, sans-serif; }
         body { background: #121212; color: #fff; text-align: center; padding: 20px; }
         h1 { margin-bottom: 20px; font-size: 24px; }
+        .profile-img { width: 100px; height: 100px; border-radius: 50%; border: 5px solid #4ea8de; margin-bottom: 20px; }
         .gallery { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 15px; max-width: 800px; margin: auto; }
-        .nft { background: #1e1e1e; padding: 10px; border-radius: 10px; }
+        .nft { background: #1e1e1e; padding: 10px; border-radius: 10px; transition: box-shadow 0.3s ease-in-out; }
+        .nft:hover { box-shadow: 0 0 15px 5px rgba(255, 255, 255, 0.5); }
         .nft img { width: 100%; border-radius: 8px; }
         .nft p { font-size: 14px; margin-top: 5px; }
+        .price { font-size: 16px; margin-top: 10px; color: #4ea8de; }
         footer { margin-top: 20px; font-size: 14px; }
-        a { color: #4ea8de; text-decoration: none; }
+        .telegram-btn { background-color: #4ea8de; padding: 10px 20px; border-radius: 20px; color: #fff; text-decoration: none; }
+        .telegram-btn:hover { background-color: #357fa0; }
     </style>
 </head>
 <body>
-    <h1>NFT-подарки от Àssa</h1>
+    <img class="profile-img" src="https://t.me/assamur" alt="Профиль Àssa">
+    <h1>Продажа NFT-подарков от Àssa</h1>
     <div class="gallery">
         <div class="nft">
-            <img src="https://t.me/nft/WitchHat-45854" alt="Witch Hat">
+            <img src="https://envs.sh/mjg.jpg" alt="Witch Hat">
             <p>Witch Hat</p>
+            <p class="price">5.5 USDT</p>
         </div>
         <div class="nft">
-            <img src="https://t.me/nft/FlyingBroom-1228" alt="Flying Broom">
+            <img src="https://envs.sh/mjH.jpg" alt="Flying Broom">
             <p>Flying Broom</p>
+            <p class="price">4.5 USDT</p>
         </div>
         <div class="nft">
-            <img src="https://t.me/nft/VoodooDoll-1954" alt="Voodoo Doll">
+            <img src="https://envs.sh/mjN.jpg" alt="Voodoo Doll">
             <p>Voodoo Doll</p>
+            <p class="price">3.5 USDT</p>
         </div>
         <div class="nft">
-            <img src="https://t.me/nft/EternalCandle-1066" alt="Eternal Candle">
+            <img src="https://envs.sh/mj8.jpg" alt="Eternal Candle">
             <p>Eternal Candle</p>
+            <p class="price">3.5 USDT</p>
         </div>
         <div class="nft">
-            <img src="https://t.me/nft/SnowMittens-2438" alt="Snow Mittens">
+            <img src="https://envs.sh/mjl.jpg" alt="Snow Mittens">
             <p>Snow Mittens</p>
+            <p class="price">4 USDT</p>
         </div>
         <div class="nft">
-            <img src="https://t.me/nft/BunnyMuffin-2255" alt="Bunny Muffin">
+            <img src="https://envs.sh/mjk.jpg" alt="Bunny Muffin">
             <p>Bunny Muffin</p>
+            <p class="price">15 USDT</p>
         </div>
         <div class="nft">
-            <img src="https://t.me/nft/CrystalBall-1386" alt="Crystal Ball">
+            <img src="https://envs.sh/mjv.jpg" alt="Crystal Ball">
             <p>Crystal Ball</p>
+            <p class="price">3.7 USDT</p>
         </div>
         <div class="nft">
-            <img src="https://t.me/nft/HangingStar-7730" alt="Hanging Star">
+            <img src="https://envs.sh/mjs.jpg" alt="Hanging Star">
             <p>Hanging Star</p>
+            <p class="price">4.5 USDT</p>
         </div>
         <div class="nft">
-            <img src="https://t.me/nft/LoveCandle-4178" alt="Love Candle">
+            <img src="https://envs.sh/mj9.jpg" alt="Love Candle">
             <p>Love Candle</p>
+            <p class="price">6 USDT</p>
         </div>
         <div class="nft">
-            <img src="https://t.me/nft/JesterHat-26935" alt="Jester Hat">
+            <img src="https://envs.sh/mjr.jpg" alt="Jester Hat">
             <p>Jester Hat</p>
+            <p class="price">3.5 USDT</p>
         </div>
         <div class="nft">
-            <img src="https://t.me/nft/PartySparkler-1312" alt="Party Sparkler">
+            <img src="https://envs.sh/mjo.jpg" alt="Party Sparkler">
             <p>Party Sparkler</p>
+            <p class="price">3.5 USDT</p>
         </div>
         <div class="nft">
-            <img src="https://t.me/nft/CookieHeart-27096" alt="Cookie Heart">
+            <img src="https://envs.sh/mjU.jpg" alt="Cookie Heart">
             <p>Cookie Heart</p>
+            <p class="price">6 USDT</p>
         </div>
     </div>
     <footer>
         <p>Оплата: TON / USDT через <a href="https://t.me/send">@send</a> / <a href="https://tonkeeper.com">Tonkeeper</a></p>
-        <p>Для покупки: <a href="https://t.me/assamur">t.me/assamur</a></p>
+        <a href="https://t.me/assamur" class="telegram-btn">Для покупки: telegram</a>
     </footer>
 </body>
-    </html>
+</html>
