@@ -1,188 +1,76 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>♡</title>
+    <title>NFT-подарки от Àssa</title>
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            background: linear-gradient(135deg, #1a1a2e, #16213e, #0f3460);
-            font-family: Arial, sans-serif;
-            position: relative;
-            overflow: hidden;
-            flex-direction: column;
-        }
-
-        .profiles {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            width: 100%;
-            max-width: 900px;
-            padding: 0 20px;
-            box-sizing: border-box;
-            gap: 30px;
-            flex-wrap: nowrap;
-            z-index: 10;
-            text-align: center;
-            margin-top: 5%;
-            flex-direction: row;
-        }
-
-        .profile {
-            width: 45%;
-            margin-bottom: 20px;
-        }
-
-        .profile img {
-            width: 150px;
-            height: 150px;
-            border-radius: 50%;
-            border: 3px solid white;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-        }
-
-        .profile h1 {
-            font-size: 24px;
-            margin-top: 10px;
-            color: white;
-            text-shadow: 0 0 10px rgba(255, 255, 255, 0.6), 0 0 20px rgba(255, 255, 255, 0.5), 0 0 30px rgba(255, 255, 255, 0.4);
-        }
-
-        .bio {
-            font-size: 14px;
-            color: gray;
-            margin-top: 5px;
-        }
-
-        .bio a {
-            color: gray;
-            text-decoration: none;
-            font-weight: bold;
-        }
-
-        .bio a:hover {
-            text-decoration: underline;
-        }
-
-        .bio .click {
-            color: #00FF00;
-        }
-
-        .gif-container {
-            margin-top: 30px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            width: 100%;
-            margin-top: 40px;
-            z-index: 5;
-            position: relative;
-        }
-
-        .gif-container video {
-            width: 300px;
-            border: 5px solid rgba(255, 255, 255, 0.2);
-            border-radius: 10px;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
-        }
-
-        .gif-container video {
-            border: 5px solid #fff;
-            box-shadow: 0 0 15px rgba(255, 255, 255, 0.6);
-        }
-
-        @media (max-width: 768px) {
-            .profiles {
-                flex-direction: row;
-                align-items: center;
-                justify-content: space-between;
-                margin-top: 10%;
-            }
-
-            .profile img {
-                width: 120px;
-                height: 120px;
-            }
-
-            .profile h1 {
-                font-size: 20px;
-            }
-
-            .bio {
-                font-size: 12px;
-            }
-
-            .gif-container {
-                margin-top: 30px;
-            }
-
-            .gif-container video {
-                width: 250px;
-            }
-        }
-
-        @media (max-width: 480px) {
-            .profiles {
-                flex-direction: row;
-                margin-top: 10%;
-                justify-content: space-between;
-                gap: 30px;
-            }
-
-            .profile img {
-                width: 100px;
-                height: 100px;
-            }
-
-            .profile h1 {
-                font-size: 18px;
-            }
-
-            .bio {
-                font-size: 10px;
-            }
-
-            .gif-container video {
-                width: 220px;
-            }
-        }
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: Arial, sans-serif; }
+        body { background: #121212; color: #fff; text-align: center; padding: 20px; }
+        h1 { margin-bottom: 20px; font-size: 24px; }
+        .gallery { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 15px; max-width: 800px; margin: auto; }
+        .nft { background: #1e1e1e; padding: 10px; border-radius: 10px; }
+        .nft img { width: 100%; border-radius: 8px; }
+        .nft p { font-size: 14px; margin-top: 5px; }
+        footer { margin-top: 20px; font-size: 14px; }
+        a { color: #4ea8de; text-decoration: none; }
     </style>
 </head>
 <body>
-    <div class="profiles">
-        <div class="profile">
-            <img src="https://t.me/i/userpic/320/codermasochist.jpg" alt="Assa Profile">
-            <h1>Assa</h1>
-            <div class="bio">
-                <a href="https://t.me/codermasochist">t.me/codermasochist</a><br>
-                bio: <a href="http://Assa.lol" class="click">click.</a>
-            </div>
+    <h1>NFT-подарки от Àssa</h1>
+    <div class="gallery">
+        <div class="nft">
+            <img src="https://t.me/nft/WitchHat-45854" alt="Witch Hat">
+            <p>Witch Hat</p>
         </div>
-        <div class="profile">
-            <img src="https://t.me/i/userpic/320/ksellik.jpg" alt="Ksellik Profile">
-            <h1>Ks</h1>
-            <div class="bio">
-                <a href="https://t.me/ksellik">t.me/ksellik</a><br>
-                bio: <a href="http://ksellikk.github.io" class="click">click.</a>
-            </div>
+        <div class="nft">
+            <img src="https://t.me/nft/FlyingBroom-1228" alt="Flying Broom">
+            <p>Flying Broom</p>
+        </div>
+        <div class="nft">
+            <img src="https://t.me/nft/VoodooDoll-1954" alt="Voodoo Doll">
+            <p>Voodoo Doll</p>
+        </div>
+        <div class="nft">
+            <img src="https://t.me/nft/EternalCandle-1066" alt="Eternal Candle">
+            <p>Eternal Candle</p>
+        </div>
+        <div class="nft">
+            <img src="https://t.me/nft/SnowMittens-2438" alt="Snow Mittens">
+            <p>Snow Mittens</p>
+        </div>
+        <div class="nft">
+            <img src="https://t.me/nft/BunnyMuffin-2255" alt="Bunny Muffin">
+            <p>Bunny Muffin</p>
+        </div>
+        <div class="nft">
+            <img src="https://t.me/nft/CrystalBall-1386" alt="Crystal Ball">
+            <p>Crystal Ball</p>
+        </div>
+        <div class="nft">
+            <img src="https://t.me/nft/HangingStar-7730" alt="Hanging Star">
+            <p>Hanging Star</p>
+        </div>
+        <div class="nft">
+            <img src="https://t.me/nft/LoveCandle-4178" alt="Love Candle">
+            <p>Love Candle</p>
+        </div>
+        <div class="nft">
+            <img src="https://t.me/nft/JesterHat-26935" alt="Jester Hat">
+            <p>Jester Hat</p>
+        </div>
+        <div class="nft">
+            <img src="https://t.me/nft/PartySparkler-1312" alt="Party Sparkler">
+            <p>Party Sparkler</p>
+        </div>
+        <div class="nft">
+            <img src="https://t.me/nft/CookieHeart-27096" alt="Cookie Heart">
+            <p>Cookie Heart</p>
         </div>
     </div>
-
-    <div class="gif-container">
-        <video autoplay loop muted>
-            <source src="https://envs.sh/H8m.mp4" type="video/mp4">
-        </video>
-    </div>
+    <footer>
+        <p>Оплата: TON / USDT через <a href="https://t.me/send">@send</a> / <a href="https://tonkeeper.com">Tonkeeper</a></p>
+        <p>Для покупки: <a href="https://t.me/assamur">t.me/assamur</a></p>
+    </footer>
 </body>
-</html>
+    </html>
