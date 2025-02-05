@@ -3,40 +3,75 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Продажа хостинга для Hikka Userbot</title>
+    <title>pipipu</title>
     <style>
         body {
-            background-color: #444;
+            background-color: #2c2c2c;
             color: white;
             font-family: Arial, sans-serif;
             display: flex;
+            flex-direction: column;
             justify-content: center;
             align-items: center;
             height: 100vh;
             margin: 0;
         }
         .container {
+            display: flex;
+            gap: 40px;
+        }
+        .box {
+            width: 300px;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 0 15px;
+        }
+        .blue-glow {
+            border: 2px solid #0088cc;
+            box-shadow: 0 0 15px #0088cc;
+        }
+        .red-glow {
+            border: 2px solid #cc0000;
+            box-shadow: 0 0 15px #cc0000;
+        }
+        .purchase {
+            margin-top: 40px;
             text-align: center;
         }
         .btn {
             display: inline-block;
             margin-top: 15px;
-            padding: 10px 20px;
-            background-color: #0088cc;
+            padding: 12px 24px;
+            border: 2px solid white;
             color: white;
             text-decoration: none;
             border-radius: 5px;
+            transition: background 0.3s;
         }
         .btn:hover {
-            background-color: #0077b3;
+            background: rgba(255, 255, 255, 0.2);
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>Продажа хостинга для Hikka Userbot</h1>
-        <p>1 месяц — 1$</p>
-        <a href="https://t.me/codermasochist" class="btn">Купить</a>
+        <div class="box blue-glow">
+            <h2>Хороший хостинг для Hikka Userbot</h2>
+            <p>Сервер: Oracle</p>
+            <p>Цена:</p>
+            <p>1 месяц — 1$ / @send</p>
+        </div>
+        <div class="box red-glow">
+            <h2>Good Hosting for Hikka Userbot</h2>
+            <p>Server: Oracle</p>
+            <p>Price:</p>
+            <p>1 month — 1$ / @send</p>
+        </div>
+    </div>
+    <div class="purchase">
+        <h2>Для покупки писать:</h2>
+        <a href="https://t.me/codermasochist" class="btn">Telegram - t.me/codermasochist</a>
     </div>
 </body>
 </html>
