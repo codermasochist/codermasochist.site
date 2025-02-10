@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -26,28 +26,43 @@
         .container {
             text-align: center;
             background: rgba(0, 0, 0, 0.5);
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
+            width: 80%;
+            max-width: 600px;
+        }
+
+        .container h1 {
+            font-size: 28px;
+            margin-bottom: 15px;
+        }
+
+        .container p {
+            font-size: 18px;
+            margin: 10px 0;
         }
 
         .container a {
             color: #ffbb00;
             text-decoration: none;
+            font-size: 18px;
+            font-weight: bold;
         }
 
         .btn-new {
             overflow: hidden;
             position: relative;
             display: inline-block;
-            margin-top: 20px;
-            padding: 10px 20px;
+            margin-top: 25px;
+            padding: 12px 25px;
             border: 1px solid #fff;
             border-radius: 5px;
             color: #fff;
             text-decoration: none;
             background: transparent;
             transition: 0.3s;
+            font-size: 18px;
         }
 
         .btn-new:hover {
@@ -95,7 +110,40 @@
             top: 20px;
             right: 20px;
             cursor: pointer;
-            font-size: 24px;
+            width: 50px;
+            height: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: #fff;
+            border-radius: 50%;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            transition: background 0.3s;
+        }
+
+        .theme-toggle svg {
+            width: 24px;
+            height: 24px;
+            transition: transform 0.3s, opacity 0.3s;
+        }
+
+        .theme-toggle .sun {
+            opacity: 0;
+            transform: scale(0.5);
+        }
+
+        .light-mode .theme-toggle {
+            background: #333;
+        }
+
+        .light-mode .theme-toggle .sun {
+            opacity: 1;
+            transform: scale(1);
+        }
+
+        .light-mode .theme-toggle .moon {
+            opacity: 0;
+            transform: scale(0.5);
         }
 
         .light-mode {
@@ -119,21 +167,32 @@
 </head>
 <body>
     <div class="theme-toggle" onclick="toggleTheme()">
-        <span id="theme-icon">🌙</span>
+        <svg class="sun" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+        </svg>
+        <svg class="moon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"></path>
+        </svg>
     </div>
-    
+
     <div class="container">
         <h1>Hosting for Hikka</h1>
-        <p><strong>Server:</strong> Oracle</p>
-        <p><strong>Price:</strong> 1$/mo | <a href="https://t.me/send">@send</a></p>
+        <p><strong>Сервер:</strong> Oracle</p>
+        <p><strong>Цена:</strong> 1$/mo | <a href="https://t.me/send">@send</a></p>
         <a href="https://t.me/codermasochist" class="btn-new">Assa</a>
     </div>
 
     <script>
         function toggleTheme() {
             document.body.classList.toggle("light-mode");
-            document.getElementById("theme-icon").textContent = 
-                document.body.classList.contains("light-mode") ? "☀️" : "🌙";
         }
     </script>
 </body>
