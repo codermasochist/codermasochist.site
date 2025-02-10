@@ -1,82 +1,140 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>pipipu</title>
+    <title>Hosting for Hikka</title>
     <style>
-        body {
-            background-color: #000;
-            color: white;
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
             font-family: Arial, sans-serif;
+        }
+
+        body {
+            background: #333;
+            color: #fff;
             display: flex;
-            flex-direction: column;
             justify-content: center;
             align-items: center;
             height: 100vh;
-            margin: 0;
+            flex-direction: column;
+            transition: background 0.3s, color 0.3s;
         }
+
         .container {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 40px;
-            flex-wrap: wrap;
-            max-width: 800px;
-            width: 100%;
-        }
-        .box {
-            width: 300px;
+            text-align: center;
+            background: rgba(0, 0, 0, 0.5);
             padding: 20px;
             border-radius: 10px;
-            text-align: center;
-            box-shadow: 0 0 15px;
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
         }
-        .blue-glow {
-            border: 2px solid #0088cc;
-            box-shadow: 0 0 15px #0088cc;
-        }
-        .red-glow {
-            border: 2px solid #cc0000;
-            box-shadow: 0 0 15px #cc0000;
-        }
-        .purchase {
-            margin-top: 40px;
-            text-align: center;
-        }
-        .btn {
-            display: inline-block;
-            margin-top: 15px;
-            padding: 12px 24px;
-            border: 2px solid white;
-            color: white;
+
+        .container a {
+            color: #ffbb00;
             text-decoration: none;
-            border-radius: 5px;
-            transition: background 0.3s;
         }
-        .btn:hover {
-            background: rgba(255, 255, 255, 0.2);
+
+        .btn-new {
+            overflow: hidden;
+            position: relative;
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            border: 1px solid #fff;
+            border-radius: 5px;
+            color: #fff;
+            text-decoration: none;
+            background: transparent;
+            transition: 0.3s;
+        }
+
+        .btn-new:hover {
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+        .btn-new:after {
+            content: "";
+            display: block;
+            width: 30px;
+            height: 200px;
+            margin-left: 60px;
+            background: #fff;
+            opacity: 0.5;
+            position: absolute;
+            left: -40px;
+            top: -100px;
+            z-index: 1;
+            transform: rotate(45deg);
+            transition: all 0.1s;
+            animation-name: slideme;
+            animation-duration: 3s;
+            animation-delay: 0.05s;
+            animation-timing-function: ease-in-out;
+            animation-iteration-count: infinite;
+        }
+
+        @keyframes slideme {
+            0% {
+                left: -30px;
+                margin-left: 0px;
+            }
+            30% {
+                left: 110%;
+                margin-left: 80px;
+            }
+            100% {
+                left: 110%;
+                margin-left: 80px;
+            }
+        }
+
+        .theme-toggle {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            cursor: pointer;
+            font-size: 24px;
+        }
+
+        .light-mode {
+            background: #fff;
+            color: #000;
+        }
+
+        .light-mode .container {
+            background: rgba(0, 0, 0, 0.1);
+        }
+
+        .light-mode .btn-new {
+            border-color: #000;
+            color: #000;
+        }
+
+        .light-mode .btn-new:hover {
+            background: rgba(0, 0, 0, 0.1);
         }
     </style>
 </head>
 <body>
+    <div class="theme-toggle" onclick="toggleTheme()">
+        <span id="theme-icon">🌙</span>
+    </div>
+    
     <div class="container">
-        <div class="box blue-glow">
-            <h2>Хороший хостинг для Hikka Userbot</h2>
-            <p>Сервер: Oracle</p>
-            <p>Цена:</p>
-            <p>1 месяц — 1$ / @send</p>
-        </div>
-        <div class="box red-glow">
-            <h2>Good Hosting for Hikka Userbot</h2>
-            <p>Server: Oracle</p>
-            <p>Price:</p>
-            <p>1 month — 1$ / @send</p>
-        </div>
+        <h1>Hosting for Hikka</h1>
+        <p><strong>Server:</strong> Oracle</p>
+        <p><strong>Price:</strong> 1$/mo | <a href="https://t.me/send">@send</a></p>
+        <a href="https://t.me/codermasochist" class="btn-new">Assa</a>
     </div>
-    <div class="purchase">
-        <h2>Для покупки писать:</h2>
-        <a href="https://t.me/codermasochist" class="btn">Telegram</a>
-    </div>
+
+    <script>
+        function toggleTheme() {
+            document.body.classList.toggle("light-mode");
+            document.getElementById("theme-icon").textContent = 
+                document.body.classList.contains("light-mode") ? "☀️" : "🌙";
+        }
+    </script>
 </body>
 </html>
