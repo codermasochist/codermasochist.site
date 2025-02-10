@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>?</title>
+    <title>host</title>
     <style>
         * {
             margin: 0;
@@ -28,18 +28,43 @@
             color: white;
             box-shadow: 0 0 15px rgba(255, 255, 255, 0.8);
             border: 2px solid rgba(255, 255, 255, 0.7);
+            width: 350px;
+        }
+
+        .avatar {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+
+        .avatar img {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            border: 3px solid white;
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+        }
+
+        .uid {
+            margin-top: 8px;
+            font-size: 16px;
+            font-weight: bold;
+            text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
         }
 
         .title {
             font-size: 24px;
             font-weight: bold;
             margin-bottom: 15px;
+            text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
         }
 
         .price-list {
             font-size: 18px;
             line-height: 1.6;
             margin-bottom: 20px;
+            text-shadow: 0 0 8px rgba(255, 255, 255, 0.6);
         }
 
         .btn-new {
@@ -53,6 +78,7 @@
             overflow: hidden;
             text-decoration: none;
             transition: background 0.3s;
+            text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
         }
 
         .btn-new:hover {
@@ -82,6 +108,10 @@
 </head>
 <body>
     <div class="container">
+        <div class="avatar">
+            <img src="https://t.me/i/userpic/320/codermasochist.jpg" alt="Telegram Avatar">
+            <div class="uid">UID: 7130298880</div>
+        </div>
         <div class="title">Hosting for Userbot Hikka</div>
         <hr>
         <div class="price-list">
